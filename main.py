@@ -20,7 +20,28 @@ products = [
     ),
 ]
 
+# Get all the products
+
 
 @app.get("/products")
 def get_all_products():
     return products
+
+
+# Get a product by id
+
+
+@app.get("/product/{id}")
+def get_product_by_id(id: int):
+    for product in products:
+        if product.id == id:
+            return product
+
+
+# Add products
+
+
+@app.post("/product")
+def add_product(product: Product):
+    products.append(product)
+    return product
