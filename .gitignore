@@ -1,0 +1,9 @@
+# Python ignores
+myenv/
+__pycache__/
+
+# React / JavaScript ignores
+node_modules/
+dist/
+build/
+.env.local
