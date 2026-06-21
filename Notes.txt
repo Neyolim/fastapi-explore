@@ -1,0 +1,129 @@
+1. FastAPI
+
+---
+
+FastAPI is a modern Python web framework used to build APIs quickly and efficiently. It provides high performance, automatic data validation, type hints, and interactive API documentation.
+
+Key Features:
+
+* High performance
+* Automatic API documentation
+* Type validation
+* Easy to learn and use
+
+2. Pydantic
+
+---
+
+Pydantic is a data validation library used by FastAPI. It defines the structure of data, validates incoming requests, and ensures that data types and required fields are correct before processing.
+
+Uses:
+
+* Request validation
+* Response validation
+* Type checking
+* Data serialization
+
+Example:
+
+* Name must be a string
+* Price must be a number
+* Required fields cannot be missing
+
+3. SQLAlchemy
+
+---
+
+SQLAlchemy is a Python ORM (Object Relational Mapper) that allows developers to interact with databases using Python classes and objects instead of writing raw SQL queries.
+
+Uses:
+
+* Create database models
+* Insert records
+* Query data
+* Update records
+* Delete records
+
+Commonly used with:
+
+* SQLite
+* PostgreSQL
+* MySQL
+
+4. REST API Development
+
+---
+
+REST (Representational State Transfer) is an architectural style for building web APIs. It enables communication between applications using HTTP methods.
+
+Common HTTP Methods:
+
+GET    -> Retrieve data
+POST   -> Create new data
+PUT    -> Update existing data
+DELETE -> Remove data
+
+Benefits:
+
+* Simple
+* Scalable
+* Widely adopted
+* Platform independent
+
+5. CRUD Operations
+
+---
+
+CRUD represents the four basic operations performed on data.
+
+C -> Create  (Add new data)
+R -> Read    (Retrieve data)
+U -> Update  (Modify existing data)
+D -> Delete  (Remove data)
+
+Example:
+A product management system allows users to create, read, update, and delete products.
+
+6. Database Integration
+
+---
+
+Database integration is the process of connecting an application to a database so that data can be stored, retrieved, updated, and deleted.
+
+Flow:
+
+Application
+|
+v
+ORM (SQLAlchemy)
+|
+v
+Database
+
+Common Databases:
+
+* SQLite
+* PostgreSQL
+* MySQL
+
+7. Dependency Injection
+
+---
+
+Dependency Injection is a design pattern where required resources are provided to a function instead of being created inside it.
+
+In FastAPI, it is commonly used for:
+
+* Database sessions
+* Authentication
+* Configuration settings
+
+Benefits:
+
+* Cleaner code
+* Better reusability
+* Easier testing
+* Improved maintainability
+
+Example:
+A route receives a database connection through a dependency instead of creating a new connection every time.
