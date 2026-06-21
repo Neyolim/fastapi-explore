@@ -10,7 +10,9 @@ def greet():
 
 
 products = [
-    Product(id=1, name="Phone", description="A smartphone", price=699.99, quantity=50),
+    Product(
+        id=1, name="Phone", description="A smartphone", price=699.99, quantity=50
+    ),
     Product(
         id=2, name="Laptop", description="A powerful laptop", price=999.99, quantity=30
     ),
