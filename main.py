@@ -24,6 +24,20 @@ products = [
     ),
 ]
 
+
+def init_db():
+    db = session()
+    count = db.query(database_models.Product).count
+
+    if count == 0:
+        for product in products:
+            db.add(database_models.Product(**product.model_dump()))
+
+        db.commit()
+
+
+init_db()
+
 # Get all the products
 
 
