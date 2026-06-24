@@ -1,8 +1,11 @@
 from fastapi import FastAPI
 from models import Product
-from database import session
+from database import session, engine
+import database_models
 
 app = FastAPI()
+
+database_models.Base.metadata.create_all(bind=engine)
 
 
 @app.get("/")
@@ -11,9 +14,7 @@ def greet():
 
 
 products = [
-    Product(
-        id=1, name="Phone", description="A smartphone", price=699.99, quantity=50
-    ),
+    Product(id=1, name="Phone", description="A smartphone", price=699.99, quantity=50),
     Product(
         id=2, name="Laptop", description="A powerful laptop", price=999.99, quantity=30
     ),
